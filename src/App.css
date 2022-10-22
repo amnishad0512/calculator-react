@@ -1,38 +1,91 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main {
+  height: 100vh;
+  width: 100%;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.calc {
+  display: grid;
+  height: max-content;
+  gap: 10px;
+  grid-template-areas:
+    "input input input input"
+    "add sub mul div"
+    "seven eight nine result"
+    "four five six result"
+    "one two three result"
+    "zero decimal clear result";
+}
+.calc > input {
+  border: 2px solid black;
+  font-size: 25px;
+  padding: 10px;
+  text-align: right;
+}
+.calc > button {
+  padding: 10px;
+  font-size: 18px;
+  background: whitesmoke;
+  border: none;
+}
+
+.input {
+  grid-area: input;
+}
+.add {
+  grid-area: add;
+}
+.sub {
+  grid-area: sub;
+}
+.mul {
+  grid-area: mul;
+}
+.div {
+  grid-area: div;
+}
+.seven {
+  grid-area: seven;
+}
+.eight {
+  grid-area: eight;
+}
+.nine {
+  grid-area: nine;
+}
+.result {
+  background-color: #4e90fe !important ;
   color: white;
+  grid-area: result;
 }
-
-.App-link {
-  color: #61dafb;
+.four {
+  grid-area: four;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.five {
+  grid-area: five;
+}
+.six {
+  grid-area: six;
+}
+.one {
+  grid-area: one;
+}
+.two {
+  grid-area: two;
+}
+.three {
+  grid-area: three;
+}
+.zero {
+  grid-area: zero;
+}
+.decimal {
+  grid-area: decimal;
+}
+.clear {
+  background-color: #ed8906 !important;
+  color: white;
+  grid-area: clear;
 }
